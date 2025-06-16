@@ -1,3 +1,11 @@
+/**
+ * main - Entry point
+ *
+ * Description: 'puts' prints a specific string
+ *
+ * Return: Always 0 (Success)
+ */
+
 #include <stdio.h>
 
 int main(void)
