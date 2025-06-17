@@ -1,11 +1,14 @@
 #include <stdio.h>
 
-/*main - Entry point
+/**
+ * main - Entry point
+ *
+ * Description: Prints digits 0-9 using putchar
  *
  * Return: Always 0 (Success)
  */
 
-int main (void)
+int main(void)
 {
 	int i;
 
@@ -13,6 +16,6 @@ int main (void)
 	{
 		putchar(i + '0');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
