@@ -11,19 +11,19 @@
 
 int print_sign(int n)
 {
-	if (n > 48)
+	if (n > 0)
 	{
-		return (1);
 		print_sign('+');
+		return (1);
 	}
-	if (n == 48)
+	if (n == 0)
 	{
-		return (0);
 		print_sign('0');
+		return (0);
 	}
 	else
 	{
-		return (-1);
 		print_sign('-');
+		return (-1);
 	}
 }
