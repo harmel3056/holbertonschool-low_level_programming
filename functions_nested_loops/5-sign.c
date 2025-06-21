@@ -1,29 +1,27 @@
 #include "main.h"
 
 /**
- * print_sign(int n) - checks letters and prints the sign of a number
+ * print_sign - checks letters and prints the sign of a number
  * and lowercase characters
  * @n: character to check
- * Return: 1 if 'n' is greater than 0, print '+'
- * 0 if 'n' is equal to 0, print '0'
- * -1 if n is below 0, print '-'
+ * Return: 1 if n > 0, 0 if n == 0, -1 if n < 0
  */
 
 int print_sign(int n)
 {
 	if (n > 0)
 	{
-		print_sign('+');
+		_putchar('+');
 		return (1);
 	}
 	if (n == 0)
 	{
-		print_sign('0');
+		_putchar('0');
 		return (0);
 	}
 	else
 	{
-		print_sign('-');
+		_putchar('-');
 		return (-1);
 	}
 }
