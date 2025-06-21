@@ -14,16 +14,16 @@ int print_sign(int n)
 	if (n > 48)
 	{
 		return (1);
-		_putchar('+');
+		print_sign('+');
 	}
 	if (n == 48)
 	{
 		return (0);
-		_putchar ('0');
+		print_sign('0');
 	}
 	else
 	{
 		return (-1);
-		_putchar('-');
+		print_sign('-');
 	}
 }
