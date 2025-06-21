@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -6,7 +6,7 @@
  * Return: Always 0 (Success)
  */
 
-int main (void)
+int main(void)
 {
 	putchar('_');
 	putchar('p');
@@ -17,5 +17,5 @@ int main (void)
 	putchar('a');
 	putchar('r');
 	putchar('\n');
-return(0);
+return (0);
 }
