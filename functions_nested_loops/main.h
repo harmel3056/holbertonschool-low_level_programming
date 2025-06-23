@@ -2,6 +2,7 @@
 #define MAIN_H
 
 int _abs(int);
+int add(int a, int b);
 int _putchar(int c);
 int _islower(int c);
 int _isalpha(int c);
