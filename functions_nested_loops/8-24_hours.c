@@ -19,22 +19,11 @@ void jack_bauer(void)
 		curr_min = 0;
 		while (curr_min <= final_min)
 		{
-			if (curr_hour < 10)
-			{
-				_putchar('0');
-			}
-			_putchar('0' + curr_hour);
+			_putchar('0' + (curr_hour / 10));
+			_putchar('0' + (curr_hour % 10));
 			_putchar (':');
-
-			if (curr_min < 10)
-			{
-				_putchar('0');
-			}
-			else
-			{
-				_putchar('0' + (curr_min / 10));
-			}
-			_putchar('0' + curr_min);
+			_putchar('0' + (curr_min / 10));
+			_putchar('0' + (curr_min % 10));
 			_putchar('\n');
 			curr_min = curr_min + 1;
 		}
