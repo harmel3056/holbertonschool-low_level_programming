@@ -33,7 +33,6 @@ void jack_bauer(void)
 			else
 			{
 				_putchar('0' + (curr_min / 10));
-				_putchar('0' + (curr_min % 10));
 			}
 			_putchar('0' + curr_min);
 			_putchar('\n');
