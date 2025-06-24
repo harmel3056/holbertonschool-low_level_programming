@@ -2,37 +2,22 @@
 
 /**
  * print_line - prints lines based on value
+ * @n: number of '_' entered per line
  * Return: void
  */
 
-void print_line(void)
+void print_line(int n)
 {
-	int n = 0;
-	int l = 0;
+	int i = 0;
 
 	if (n <= 0)
 	{
 		_putchar('\n');
 	}
-	while (n > 0)
+	while (i < n)
 	{
-		_putchar('_' * n);
-
-
-
-	while (r < 10)
-	{
-		n = 0;
-		while (n <= 14)
-		{
-			if (n >= 10)
-			{
-				_putchar((n / 10) + '0');
-			}
-			_putchar((n % 10) + '0');
-			n = n + 1;
-		}
-	_putchar('\n');
-	r = r + 1;
+		_putchar('_');
+		i = i + 1;
 	}
+	_putchar('\n');
 }
