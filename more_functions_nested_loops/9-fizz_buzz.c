@@ -29,10 +29,10 @@ int main(void)
 		{
 			printf(" ");
 		}
-		
+
 		x = x + 1;
 	}
-	
+
 	printf("\n");
 	return (0);
 }
