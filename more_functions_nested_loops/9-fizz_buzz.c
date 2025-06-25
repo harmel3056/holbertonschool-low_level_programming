@@ -1,30 +1,32 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_square - prints '#' to create square
- * @size: number of columns and rows
+ * main - prints 1 - 100 with
+ * "Fizz" for multiples of 3 and
+ * "Buzz" for multiples of 5
  * Return: void
  */
 
-void print_square(int size)
+int main(void)
 {
-	int row = 0;
+	int x = 1;
 
-	if (size <= 0)
+	while (x <= 100)
 	{
-		_putchar('\n');
-	}
-
-	while (row < size)
-	{
-		int col = 0;
-
-		while (col < size)
+		if (x % 3 == 0)
 		{
-			_putchar('#');
-			col = col + 1;
+			printf("Fizz");
 		}
-	_putchar('\n');
-	row = row + 1;
+		if (x % 5 == 0)
+		{
+			printf("Buzz");
+		}
+		else if (x % 3 != 0 && x % 5 != 0)
+		{
+			printf("%d", x);
+		}
+		printf(" ");
+		x = x + 1;
 	}
+	return (0);
 }
