@@ -1,10 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+char *cap_string(char *);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 char *string_toupper(char *);
 char *_strncat(char *dest, char *src, int n);
+int is_separator(char c);
 int _putchar(char c);
 int _strlen(char *s);
 void _puts(char *str);
