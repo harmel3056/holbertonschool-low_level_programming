@@ -40,6 +40,11 @@ char *cap_string(char *s)
 		else if (cap_next && s[c] >= 97 && s[c] <= 122)
 		{
 			s[c] = s[c] - 32;
+			cap_next = 0;
+		}
+		else
+		{
+			cap_next = 0;
 		}
 		c++;
 	}
