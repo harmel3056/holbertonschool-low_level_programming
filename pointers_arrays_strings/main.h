@@ -3,6 +3,7 @@
 
 char *cap_string(char *);
 char *leet(char *);
+char *_memset(char *s, char b, unsigned int n);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 char *string_toupper(char *);
