@@ -9,6 +9,7 @@ char *_strcat(char *dest, char *src);
 char *_strchr(char *s, char c);
 char *_strcpy(char *dest, char *src);
 char *_strpbrk(char *s, char *accept);
+char *_strstr(char *haystack, char *needle);
 char *string_toupper(char *);
 char *_strncat(char *dest, char *src, int n);
 int is_separator(char c);
