@@ -2,8 +2,8 @@
 
 /**
  * _strspn - function that gets the length of a prefix substring.
- * @s: string to search
- * @accept: bytes to look for in s
+ * @s: string to search, counter i
+ * @accept: bytes to look for in s, counter b
  *
  * Description: Returns the number of bytes in the initial segment of s
  * which consist only of bytes from accept
@@ -12,13 +12,22 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int length = 0;
+	unsigned int b;
+	unsigned int i;
 
-	if (*accept == *s)
+	for (i = 0; s[i]; i++)
 	{
-		length = length + 1;
-		accept++;
+		for (b = 0; accept[b]; b++)
+		{
+			if (s[i] == accept[b])
+			{
+				break;
+			}
+		}
+		if (accept[b] == '\0')
+		{
+			break;
+		}
 	}
-
-	return (length);
+	return (i);
 }
