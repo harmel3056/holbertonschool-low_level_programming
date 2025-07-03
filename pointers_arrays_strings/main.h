@@ -13,6 +13,7 @@ char *_strncat(char *dest, char *src, int n);
 int is_separator(char c);
 int _putchar(char c);
 int _strlen(char *s);
+unsigned int _strspn(char *s, char *accept);
 void _puts(char *str);
 void print_array(int *a, int n);
 void print_rev(char *s);
