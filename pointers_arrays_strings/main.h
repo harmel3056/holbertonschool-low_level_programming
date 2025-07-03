@@ -8,6 +8,7 @@ char *_memset(char *s, char b, unsigned int n);
 char *_strcat(char *dest, char *src);
 char *_strchr(char *s, char c);
 char *_strcpy(char *dest, char *src);
+char *_strpbrk(char *s, char *accept);
 char *string_toupper(char *);
 char *_strncat(char *dest, char *src, int n);
 int is_separator(char c);
