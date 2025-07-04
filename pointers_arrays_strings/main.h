@@ -18,6 +18,7 @@ int _strlen(char *s);
 unsigned int _strspn(char *s, char *accept);
 void _puts(char *str);
 void print_array(int *a, int n);
+void print_chessboard(char (*a)[8]);
 void print_rev(char *s);
 void puts_half(char *str);
 void puts2(char *str);
