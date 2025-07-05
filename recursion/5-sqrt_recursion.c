@@ -42,7 +42,7 @@ int _sqr_calc(int n, int low, int high)
 		return (-1);
 	}
 
-	mid = (low + (high - low) / 2);
+	mid = ((low + high) / 2);
 	square = mid * mid;
 
 	if (square == n)
@@ -55,6 +55,6 @@ int _sqr_calc(int n, int low, int high)
 	}
 	else
 	{
-		return (_sqr_calc(n, low, mid - 1));
+	return (_sqr_calc(n, low, mid - 1));
 	}
 }
