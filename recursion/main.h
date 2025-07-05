@@ -2,6 +2,7 @@
 #define MAIN_H
 
 int factorial(int n);
+int _sqr_calc(int n, int low, int high);
 int _putchar(char c);
 int _sqrt_recursion(int n);
 int _strlen_recursion(char *s);
