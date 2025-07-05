@@ -1,5 +1,7 @@
 #include "main.h"
 
+int _sqr_calc(int n, int low, int high);
+
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: number to test
@@ -35,7 +37,7 @@ int _sqrt_recursion(int n)
 int _sqr_calc(int n, int low, int high)
 {
 	int mid;
-	int square;
+	long square;
 
 	if (low > high)
 	{
@@ -43,7 +45,7 @@ int _sqr_calc(int n, int low, int high)
 	}
 
 	mid = ((low + high) / 2);
-	square = mid * mid;
+	square = (long) mid * mid;
 
 	if (square == n)
 	{
