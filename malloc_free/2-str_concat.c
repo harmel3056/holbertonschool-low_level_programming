@@ -8,7 +8,7 @@
 * @s2: string 2
 *
 * Description: concatenates two strings, s1 and then s1
-* Return: pointer to a new string inc s1, s1, \0
+* Return: pointer to a new string inc s1, s2, \0
 */
 
 char *str_concat(char *s1, char *s2)
@@ -16,24 +16,24 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	unsigned int i, j, length1, length2;
 
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
 	length1 = 0;
 	while (s1[length1] != '\0')
-	{
 		length1++;
-	}
 
 	length2 = 0;
 	while (s2[length2] != '\0')
-	{
 		length2++;
-	}
 
-	ptr = malloc((length1 + length2 + 2) * sizeof(char));
+	ptr = malloc((length1 + length2 + 1) * sizeof(char));
 
-	if (ptr == (NULL))
-	{
-	return (NULL);
-	}
+	if (ptr == NULL)
+		return (NULL);
 
 	i = 0;
 	while (s1[i] != '\0')
