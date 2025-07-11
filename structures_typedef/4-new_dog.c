@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 char *copy_string(char *str);
 
@@ -52,7 +51,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 char *copy_string(char *str)
 {
-	int size;
+	int size, i;
 	char *copy;
 
 	if (!str)
@@ -61,9 +60,11 @@ char *copy_string(char *str)
 	size = strlen(str) + 1;
 	copy = malloc(size);
 
-		if (!copy)
-			return (NULL);
+	if (!copy)
+		return (NULL);
+	
+	for (i = 0; i < size; i++)
+		copy[i] = str[i];
 
-	strcpy(copy, str);
 	return (copy);
 }
