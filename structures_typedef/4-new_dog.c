@@ -48,23 +48,33 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (d);
 }
 
+/**
+ * copy_string - helper function to copy string
+ * @str: string to copy
+ *
+ * Description: takes string size and uses that to make copies
+ * Return: copy of the string
+ */
 
 char *copy_string(char *str)
 {
-	int size, i;
+	int size = 0, i;
 	char *copy;
 
 	if (!str)
 		return (NULL);
 
-	size = strlen(str) + 1;
-	copy = malloc(size);
+	while (str[size] != '\0')
+		size++;
+
+	copy = malloc(size + 1);
 
 	if (!copy)
 		return (NULL);
-	
+
 	for (i = 0; i < size; i++)
 		copy[i] = str[i];
 
+	copy[i] = '\0';
 	return (copy);
 }
