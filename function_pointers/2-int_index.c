@@ -8,16 +8,23 @@
  * @cmp: pointer to function to be used to compare values
  *
  * Description: searches an array for an integer
- * Return: returns index of first element that matches int
+ * Return: returns index of first array element that matches int
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i = 0;
 
+	if (size <= 0 || array == NULL || cmp == NULL)
+		return (-1);
+
 	while (i < size)
 	{
-		if (array[i] == cmp(int)
+		if (cmp(array[i]) != 0)
+			return (i);
 
-while loop to run through array[i] to up to int size
-	cmp runs against each i and checks for match
+		i++;
+	}
+
+	return (-1);
+}
