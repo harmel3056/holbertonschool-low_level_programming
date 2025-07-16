@@ -6,15 +6,15 @@
  * get_op_func - selects the correct function
  * to perform operation asked by user
  * @s: the operator passed as argument to program (+ - / etc)
- * 
- * Result: pointer to the function corresponding to 
+ *
+ * Description: selects function that corresponds to operator
+ * Return: pointer to the function corresponding to
  * the operator given as parameter
  */
 
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = 
-	{
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -33,5 +33,3 @@ int (*get_op_func(char *s))(int, int)
 	}
 	return (NULL);
 }
-		
-
