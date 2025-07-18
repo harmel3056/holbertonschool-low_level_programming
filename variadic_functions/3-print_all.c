@@ -18,17 +18,33 @@ void print_all(const char * const format, ...)
         {"f", print_float},
         {"s", print_string},
         {NULL, NULL}
-    };
+	};
+	va_list list;
+	int i = 0;
+	int j = 0;
+	int printed_one = 0;
 
-
-
-
-
-
-
-
-
-
+	va_start(list, format);
+		while(format != NULL && format[i] != '\0')
+		{
+			while (j < 4)
+			{
+				if(*ops[j].t == format[i])
+				{
+					if (printed_one == 1)
+						printf(", ");
+					
+					ops[j].f[&list];
+					printed_one = 1;
+				}
+				j = j++;
+			}
+			j = 0;
+			i = i++;
+		}
+		va_end(list);
+		printf("\n");
+}
 
 void print_char(va_list *list)
 {
