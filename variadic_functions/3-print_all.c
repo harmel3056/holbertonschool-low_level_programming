@@ -12,7 +12,7 @@
 
 void print_all(const char * const format, ...)
 {
-	 op_t ops[] = {
+	print_op_t ops[] = {
 	{"c", print_char},
 	{"i", print_integer},
 	{"f", print_float},
@@ -29,13 +29,14 @@ void print_all(const char * const format, ...)
 		{
 			while (j < 4)
 			{
-				if (*ops[j].t == format[i])
+				if (ops[j].t[0] == format[i])
 				{
 					if (printed_one == 1)
 						printf(", ");
 
-					ops[j].f[&list];
+					ops[j].f(&list);
 					printed_one = 1;
+					break;
 				}
 				j++;
 			}
@@ -57,7 +58,7 @@ void print_char(va_list *list)
 {
 	char c;
 
-	c = va_arg(*list, char);
+	c = va_arg(*list, int);
 	printf("%c", c);
 }
 
@@ -87,7 +88,7 @@ void print_float(va_list *list)
 {
 	float f;
 
-	f = va_arg(*list, float);
+	f = va_arg(*list, double);
 	printf("%f", f);
 }
 
