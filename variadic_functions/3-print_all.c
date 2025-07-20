@@ -102,7 +102,12 @@ void print_float(va_list *list)
 void print_string(va_list *list)
 {
 	char *s;
+	char *output[2];
 
 	s = va_arg(*list, char *);
-	printf("%s", s);
+	
+	output[0] = "(nil)";
+	output[1] = s;
+	
+	printf("%s", output[s != NULL]);
 }
