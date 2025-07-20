@@ -105,9 +105,9 @@ void print_string(va_list *list)
 	char *output[2];
 
 	s = va_arg(*list, char *);
-	
+
 	output[0] = "(nil)";
 	output[1] = s;
-	
+
 	printf("%s", output[s != NULL]);
 }
