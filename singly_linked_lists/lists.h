@@ -4,6 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct list_node - singly linked list node
+ * @str: string
+ * @len: length of the string
+ * @next: pointer to the next node
+ *
+ * Description: Structure for a node in a singly linked list,
+ * used for storing strings and their lengths
+ */
+
 typedef struct list_node
 {
 	char *str;
