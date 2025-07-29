@@ -1,1 +1,1 @@
-We're learning C this week!
+We're learning C!
