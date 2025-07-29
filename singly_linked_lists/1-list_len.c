@@ -12,7 +12,7 @@
 size_t list_len(const list_t *h)
 {
 	int count = 0;
-	const list_t *current = h; //This guy - work out type 
+	const list_t *current = h;
 
 	while (current != 0)
 	{
@@ -22,16 +22,3 @@ size_t list_len(const list_t *h)
 
 	return (count);
 }
-
-/**
- * list_t list most likely refers to a struct, so you need to set the struct bounds
- * struct(node) would include the input data(str), length count(len), a pointer to next node(next)
- *
- * return will be a count, so you must count the elements, which requires a loop(while?)
- * while loop should terminate at a NULL, as that is the indicator for the end of the linked list
- *
- * No special requests for NULL returns or the like, no printf either
- *
- * return (count) 
- */
-
