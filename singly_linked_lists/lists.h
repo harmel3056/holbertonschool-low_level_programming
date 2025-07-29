@@ -6,9 +6,9 @@
 
 typedef struct list_node
 {
-        char *str;
+	char *str;
 	unsigned int len;
-        struct list_node *next;
+	struct list_node *next;
 } list_t;
 
 
