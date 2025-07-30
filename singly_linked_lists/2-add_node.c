@@ -39,7 +39,7 @@ list_t *add_node(list_t **head, const char *str)
  * _strlen - counts the length of a string
  * @str: string in question
  *
- * Return: number of chars NOT including \n
+ * Return: number of chars NOT including \0
  */
 
 int _strlen(const char *str)
