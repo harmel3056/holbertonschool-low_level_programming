@@ -40,15 +40,3 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	return (new_node);
 }
-
-/**
- * reserved some memory for new node, thereby making the new node
- * checked if malloc fails it'll just return null
- * SHOULD I FREE HERE?
- * set the current 'head' prev pointer to point to new node
- * gave new node data from the input
- * set new node prev pointer to NULL
- * set new node 'next' pointer to the current 'head' node
- * set current 'head' node's prev pointer to the new node
- * assigned new node as the new 'head' node
- */
