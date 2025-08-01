@@ -60,8 +60,8 @@ int delete_head(dlistint_t **head)
 		return (1);
 	}
 
-	current->next->prev = *head;
-	(*head) = current->next;
+	current->next->prev = NULL;
+	*head = current->next;
 
 	free(current);
 
@@ -88,7 +88,7 @@ int delete_tail(dlistint_t **head)
 		return (1);
 	}
 
-	current->prev->next = *head;
+	current->prev->next = NULL;
 	*head = current->prev;
 
 	free(current);
