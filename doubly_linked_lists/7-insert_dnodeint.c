@@ -19,19 +19,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int count_index = 0;
 
 	if (idx == 0)
-		return (idx_zero(h, n));
+		return (insert_head(h, n));
 
 	while (count_index != idx)
 	{
-		if (current->next == NULL)
+		if (current == NULL)
 			return (NULL);
 
 		current = current->next;
 		count_index++;
 	}
 
-	if (count_index != idx)
-		return (NULL);
+	if (current == NULL)
+		return (insert_tail(h, n));
 
 	new_node = malloc(sizeof(dlistint_t));
 
@@ -56,14 +56,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * idx_zero - helper function to handle malloc for index of zero
+ * insert_head - helper function to handle malloc for index of zero
  * @h: pointer to pointer to the first node of the linked list
  * @n: data to input into the new node
  *
  * Return: new_node address
  */
 
-dlistint_t *idx_zero(dlistint_t **h, int n)
+dlistint_t *insert_head(dlistint_t **h, int n)
 {
 	dlistint_t *new_node;
 
@@ -80,6 +80,37 @@ dlistint_t *idx_zero(dlistint_t **h, int n)
 		(*h)->prev = new_node;
 
 	*h = new_node;
+
+	return (new_node);
+}
+
+/**
+ * insert_tail - helper function to handle tail allocation on linked list
+ * @h: pointer to pointer to the first node of the linked list
+ * @n: data to input into the new node
+ *
+ * Return: new_node address
+ */
+
+dlistint_t *insert_tail(dlistint_t **h, int n)
+{
+	dlistint_t *new_node;
+	dlistint_t *last = *h;
+
+	new_node = malloc(sizeof(dlistint_t));
+
+	if (new_node == NULL)
+		return (NULL);
+
+	new_node->n = n;
+	new_node->next = NULL;
+
+	while (last->next != NULL)
+		last = last->next;
+
+	new_node->prev = last;
+
+	last->next = new_node;
 
 	return (new_node);
 }
