@@ -12,6 +12,7 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 char *string_toupper(char *);
 char *_strncat(char *dest, char *src, int n);
+int _atoi(char *s);
 int is_separator(char c);
 int _putchar(char c);
 int _strlen(char *s);
